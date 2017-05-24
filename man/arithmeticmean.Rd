@@ -4,7 +4,12 @@
 \alias{arithmeticmean}
 \title{Calculating the Arithmetic Mean}
 \usage{
-arithmeticmean(input)
+arithmeticmean(input, na.rm = FALSE)
+}
+\arguments{
+\item{input}{a vector of numbers}
+
+\item{na.rm}{true or false for whether to remove NA's before performing the calculation}
 }
 \value{
 A number
@@ -16,5 +21,11 @@ the numbers in the vector and divides by the number of elements in the vector.
 \examples{
 a <- c(-4,9,1,-6)
 arithmeticmean(a)
+
+b <- c(-4,NA,NA,9,1,-6)
+arithmeticmean(b)
+
+d <- c(-4,NA,NA,9,1,-6)
+arithmeticmean(d,na.rm=T)
 
 }

@@ -4,6 +4,7 @@
 #'
 #' @param input a vector of numbers
 #' @param order whether the modes should be sorted
+#' @param na.rm true or false for whether to remove NA's before performing the calculation
 #'
 #' @return A vector of the most frequently occurring numbers
 #'
@@ -13,13 +14,20 @@
 #' b <- c(1,2,2,2,3,3,3,4,4)
 #' modes(b)
 #'
+#' d <- c(2,4,3,3,NA,NA,NA)
+#' modes(d)
+#'
+#' e <- c(2,4,3,3,NA,NA,NA)
+#' modes(e)
+#'
 #' @export
-modes <- function(input, order = TRUE) {
+
+modes <- function(input, order = TRUE, na.rm = FALSE) {
 
   # tabulate entries in the vector
-  vect <- basictable(input, order)
+  vect <- basictable(input, order, na.rm)
 
-  # entries
+  # separate entries
   entries <- as.double(colnames(vect))
 
   # determine maximum number of entries

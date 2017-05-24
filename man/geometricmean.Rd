@@ -4,7 +4,12 @@
 \alias{geometricmean}
 \title{Calculating the Geometric Mean}
 \usage{
-geometricmean(input)
+geometricmean(input, na.rm = FALSE)
+}
+\arguments{
+\item{input}{a vector of numbers}
+
+\item{na.rm}{true or false for whether to remove NA's before performing the calculation}
 }
 \value{
 A number
@@ -17,5 +22,11 @@ elements in the vector.
 \examples{
 a <- c(3,9,5,8)
 geometricmean(a)
+
+b <- c(NA,3,NA,7,9,2)
+geometricmean(b)
+
+d <- c(NA,3,NA,7,9,2)
+geometricmean(d,na.rm=T)
 
 }

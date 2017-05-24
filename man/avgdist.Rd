@@ -4,10 +4,12 @@
 \alias{avgdist}
 \title{Calculating Average Distance from the Mean}
 \usage{
-avgdist(input)
+avgdist(input, na.rm = FALSE)
 }
 \arguments{
 \item{input}{a vector of numbers}
+
+\item{na.rm}{true or false for whether to remove NA's before performing the calculation}
 }
 \value{
 A number
@@ -19,5 +21,11 @@ vector to an absolute value and then taking the arithmetic mean.
 \examples{
 a <- c(5,7,1,-3,-9)
 avgdist(a)
+
+b <- c(NA,4,7,-2,-12)
+avgdist(b)
+
+d <- c(NA,4,NA,-2,-12)
+avgdist(d,na.rm=T)
 
 }

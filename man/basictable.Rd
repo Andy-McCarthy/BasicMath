@@ -4,12 +4,12 @@
 \alias{basictable}
 \title{Constructing a Frequency Table}
 \usage{
-basictable(input, order = TRUE)
+basictable(input, order = TRUE, na.rm = FALSE)
 }
 \arguments{
 \item{input}{a vector of numbers}
 
-\item{order}{whether the modes should be sorted `r ("default true")`}
+\item{order}{whether the modes should be sorted, with true being the default}
 }
 \value{
 A vector

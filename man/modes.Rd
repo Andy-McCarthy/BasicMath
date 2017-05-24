@@ -4,12 +4,14 @@
 \alias{modes}
 \title{Calculating the Mode}
 \usage{
-modes(input, order = TRUE)
+modes(input, order = TRUE, na.rm = FALSE)
 }
 \arguments{
 \item{input}{a vector of numbers}
 
 \item{order}{whether the modes should be sorted}
+
+\item{na.rm}{true or false for whether to remove NA's before performing the calculation}
 }
 \value{
 A vector of the most frequently occurring numbers
@@ -23,5 +25,11 @@ modes(a)
 
 b <- c(1,2,2,2,3,3,3,4,4)
 modes(b)
+
+d <- c(2,4,3,3,NA,NA,NA)
+modes(d)
+
+e <- c(2,4,3,3,NA,NA,NA)
+modes(e)
 
 }

@@ -4,10 +4,12 @@
 \alias{SST}
 \title{Calculate the Total Sum of Squares}
 \usage{
-SST(input)
+SST(input, na.rm = FALSE)
 }
 \arguments{
 \item{input}{a vector of numbers}
+
+\item{na.rm}{true or false for removing NA's before the calculation is performed}
 }
 \value{
 A number
@@ -19,5 +21,11 @@ number in the data set, squaring each re-centered observation, and then summing 
 \examples{
 a <- c(4,12,8,7)
 SST(a)
+
+b <- c(4,NA,12,NA,7)
+SST(b)
+
+d <- c(4,NA,12,8,NA,7)
+SST(d,na.rm=T)
 
 }

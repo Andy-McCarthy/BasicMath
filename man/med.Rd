@@ -4,7 +4,12 @@
 \alias{med}
 \title{Calculating the Median}
 \usage{
-med(input)
+med(input, na.rm = FALSE)
+}
+\arguments{
+\item{input}{a vector of numbers}
+
+\item{na.rm}{true or false for whether to remove NA's before performing the calculation}
 }
 \value{
 A number
@@ -12,7 +17,7 @@ A number
 \description{
 Calculates the median of a set of numbers. The function sorts the numbers in
 the vector and selects the middle number (if the number of entries is odd) or takes the average
-of the two middle numbers (if the number of entries is even)
+of the two middle numbers (if the number of entries is even).
 }
 \examples{
 a <- c(5,9,4,1,11)

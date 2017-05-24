@@ -1,0 +1,25 @@
+---
+title: "BasicMath"
+author: "Andy McCarthy"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BasicMath}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The BasicMath package is designed to allow the user to execute simple statistical methods in few commands.
+
+## Vignette Info
+
+BasicMath contains the following functions:
+
+- **arithmeticmean(input, na.rm = FALSE):** Calculate the arithmetic mean of a vector of numbers by summing the vector and dividing the sum by the number of elements in the vector
+- **geometricmean(input, na.rm = FALSE):** Calculate the geometric mean of a vector of numbers by finding the product of every number in the vector and taking the *n*th root, where *n* is the number of elements in the vector. This function should not be used with negative numbers or zeros.
+- **med(input, na.rm = FALSE):** Calculate the median of a vector of numbers
+-**basictable(input, order = TRUE, na.rm = FALSE):** Create a frequency table for the *input* vector, giving a count of how many of each number are in the vector. If order = TRUE, the values are sorted. If order = FALSE, the values are tabulated in the order they appear in the vector for the first time.
+-**modes(input, order = TRUE, na.rm = FALSE):** Determine which numbers in the *input* vector appear most frequently. If order = TRUE, the modes are given in numerical order. If order = FALSE, the modes are given in the order that they first appear in the vector.
+-**SST(input, na.rm = FALSE):** Calculate the sum of squares by subtracting the mean of the *input* vector from each entry, squaring each difference, and then summing the differences.
+-**stdeviation(input, na.rm = FALSE, sample = TRUE):** Calculate the standard deviation of a vector of numbers. If sample = TRUE, divide by the degrees of freedom n-1 where *n* is the number of entries in the vector. If sample = FALSE, divide by the number of observations *n*.
+-**avgdist(input, na.rm = FALSE):** Calculate the average distance from the mean of a set of numbers

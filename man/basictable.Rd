@@ -25,4 +25,10 @@ basictable(a)
 b <- c(6,9,1,6,2,2)
 basictable(b, order = FALSE)
 
+d <- c(2,4,3,3,NA,NA,NA)
+basictable(d, order = TRUE)
+
+e <- c(2,4,3,3,NA,NA,NA)
+modes(e, na.rm = TRUE)
+
 }

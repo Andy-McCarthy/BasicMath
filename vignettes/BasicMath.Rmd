@@ -11,7 +11,7 @@ vignette: >
 
 The BasicMath package is designed to allow the user to execute simple statistical methods in few commands.
 
-## Vignette Info
+## Available Functions
 
 BasicMath contains the following functions:
 

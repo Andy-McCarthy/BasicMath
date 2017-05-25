@@ -33,7 +33,7 @@ med <- function(input, na.rm = FALSE) {
       }
   }
 
-  if (na.rm == TRUE) {
+  if (na.rm == T) {
     input <- input[to.keep]
     N <- length(input)
   }

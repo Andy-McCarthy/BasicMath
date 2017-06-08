@@ -1,6 +1,6 @@
 ---
 title: "BasicMath"
-author: "Andy McCarthy"
+author: "Your Name"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >

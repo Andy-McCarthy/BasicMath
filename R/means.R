@@ -107,7 +107,7 @@ geometricmean <- function(input, na.rm = FALSE) {
       if (!is.na(input[i])) {
       total <- total * input[i]
       } else {
-        # if there is an NA, lessen the number of observations by 1
+        # if there is an NA, decrease the number of observations by 1
         N <- N-1
       }
     }
@@ -121,6 +121,7 @@ geometricmean <- function(input, na.rm = FALSE) {
   # deliver a warning if every entry in the vector is an NA
   if (N == 0) {
     warning("There are no usable data points in the input vector")
+    return(NULL)
   }
 
   # take the nth root of the product
